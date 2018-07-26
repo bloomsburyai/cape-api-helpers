@@ -1,3 +1,4 @@
+from logging import debug
 
 def generate_cors_headers(request):
     CORS_HEADERS = {'Access-Control-Allow-Origin': '*',
@@ -10,5 +11,5 @@ def generate_cors_headers(request):
         if header.lower() == 'origin':
             CORS_HEADERS['Access-Control-Allow-Origin'] = request.headers['origin']
             break
-
+    debug(f'Added CORS headers to request {getattr(request,"url",None)}')
     return CORS_HEADERS
