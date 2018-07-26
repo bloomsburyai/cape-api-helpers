@@ -1,0 +1,4 @@
+import os
+
+SECRET_DEBUG_KEYWORD = os.getenv('SECRET_DEBUG_KEYWORD', 'debug7373')
+SECRET_EXTRA_INFO_KEYWORD = os.getenv('SECRET_EXTRA_INFO_KEYWORD', 'trail8hef89')
