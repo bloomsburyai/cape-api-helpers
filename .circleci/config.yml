@@ -31,7 +31,7 @@ jobs:
           command: |
             . venv/bin/activate
             mkdir -p test-results/pytest
-            pytest --pyargs cape-api-helpers.test --junitxml=test-results/pytest/test-results.xml
+            pytest --pyargs cape-api-helpers.tests --junitxml=test-results/pytest/test-results.xml
 
       - store_test_results:
           path: test-results
